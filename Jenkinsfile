@@ -17,7 +17,7 @@ pipeline {
      stage('checkout') {
          steps {
              script{
-                 git "https://github.com/gopal1409/terraformjenkinshcl.git"
+                 git 'https://github.com/gopal1409/terraformjenkinshcl.git'
              }
          }
      }
