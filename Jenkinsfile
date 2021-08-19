@@ -22,7 +22,7 @@ pipeline {
                  script{
                         dir("terraform")
                         {
-                            git "https://github.com/mbabu2/terraformjenkinshcl-old"
+                            git "https://github.com/mbabu2/terraformjenkinshcl-old.git"
                         }
                     }
                 }
