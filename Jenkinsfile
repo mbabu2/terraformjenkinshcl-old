@@ -41,12 +41,12 @@ pipeline {
     echo "Insert your infrastructure test of choice and/or application validation here."
     sleep 2
     sh 'terraform show'
-    sh 'cp terraform.tfstate /var/lib/jenkins/workspace/AWS-Terraform_destroy/terraform.tfstate'
+    sh 'cp terraform.tfstate /var/lib/jenkins/workspace/terraformpipeline/terraform.tfstate'
   }
 
   stage ('Notification') {
     echo "Sent mail notification"
-    mail from: "jenkins@mycompany.com",
+    mail from: "madhavan.bb@gmail.com",
          to: "madhavan.b@hcl.com",
          subject: "Terraform build complete",
          body: "Jenkins job ${env.JOB_NAME} - build ${env.BUILD_NUMBER} complete"
